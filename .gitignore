@@ -1,0 +1,4 @@
+.Renviron
+*.csv
+api_keys.R
+api_log.txt

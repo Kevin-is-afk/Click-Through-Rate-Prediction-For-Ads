@@ -21,7 +21,7 @@ The goal is to understand if regional digital development (like Internet Users p
 └── README.md               # Project documentation
 ```
 
-#Tech Stack
+# Tech Stack
 
 Language: R (v4.3.1)
 
@@ -35,9 +35,10 @@ Version Control: Git/GitHub
 
 Install the necessary R packages before running the scripts
 
-```install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplot", "scales", "randomForest", "pROC", "caret", "recipes"))```
+```install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplot", "scales", "randomForest", "pROC", "caret", "recipes"))
+```
 
-2. Execution Order
+# 2. Execution Order
 To reproduce the results, run the scripts in the following sequence:
 
 Ingestion: scripts/01_api_ingestion.R (Fetches World Bank data).

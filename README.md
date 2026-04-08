@@ -20,7 +20,7 @@ The goal is to understand if regional digital development (like Internet Users p
 │   └── 04_modelling.R      # Random Forest training and evaluation
 └── README.md               # Project documentation
 
-Tech Stack
+#Tech Stack
 Language: R (v4.3.1)
 
 Libraries: httr, jsonlite, dplyr, lubridate, ggplot2, corrplot, scales, randomForest, ggplot2, pROC, caret, recipes
@@ -29,7 +29,7 @@ API: World Bank Open Data API
 
 Version Control: Git/GitHub
 
-1. Installation
+#1. Installation
 Install the necessary R packages before running the scripts
 install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplot", "scales", "randomForest", "pROC", "caret", "recipes"))
 

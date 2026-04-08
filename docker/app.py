@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/data')
 def get_data():
-    df = pd.read_csv('data.csv')  # your repo file
+    df = pd.read_csv('rf_predictions.csv')  # your repo file
     return df.to_json(orient='records')
 
 if __name__ == '__main__':

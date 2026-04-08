@@ -35,12 +35,14 @@ Version Control: Git/GitHub
 
 Install the necessary R packages before running the scripts
 
-```install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplot", "scales", "randomForest", "pROC", "caret", "recipes"))
+```R
+install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplot", "scales", "randomForest", "pROC", "caret", "recipes"))
 ```
 
 # 2. Execution Order
 To reproduce the results, run the scripts in the following sequence:
 
+```
 Ingestion: scripts/01_api_ingestion.R (Fetches World Bank data).
 
 Preprocessing: scripts/02_preprocessing.R (Joins datasets and handles missing values).
@@ -48,3 +50,4 @@ Preprocessing: scripts/02_preprocessing.R (Joins datasets and handles missing va
 EDA: scripts/03_eda.R (Generates insights and saves to outputs/plots/).
 
 Modelling: scripts/04_modelling.R (Trains the Random Forest and outputs predictions).
+```

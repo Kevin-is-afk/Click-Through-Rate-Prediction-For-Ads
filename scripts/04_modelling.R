@@ -116,47 +116,4 @@ ggsave("outputs/plots/feature_importance.png", p_imp, width = 9, height = 6)
 test$Predicted_Revenue    <- rf_preds
 test$Purchase_Probability <- rf_probs
 write.csv(test, "outputs/model_results/rf_predictions.csv", row.names = FALSE)
-
-# MODEL 2: K-Means — use only non-collinear numeric features
-
-# Use the clean numeric set — no derived sums, no correlated pairs
-cluster_features <- c("BounceRates", "PageValues",
-                      "ProductRelated", "ProductRelated_Duration",
-                      "Administrative", "Informational", "SpecialDay")
-
-cluster_data   <- df[, cluster_features]
-cluster_scaled <- scale(cluster_data)
-
-# Elbow
-wss <- sapply(1:10, function(k) {
-  kmeans(cluster_scaled, centers = k, nstart = 10)$tot.withinss
-})
-
-png("outputs/plots/elbow_plot.png", width = 700, height = 400)
-plot(1:10, wss, type = "b", pch = 19, col = "#003f88",
-     xlab = "k", ylab = "Total within-cluster SS",
-     main = "Elbow method — optimal k")
-dev.off()
-
-set.seed(42)
-km   <- kmeans(cluster_scaled, centers = 4, nstart = 25)
-df$Cluster <- as.factor(km$cluster)
-
-# Silhouette on a sample (full 12K distance matrix is slow)
-set.seed(1)
-samp_idx <- sample(nrow(cluster_scaled), 2000)
-sil      <- silhouette(km$cluster[samp_idx], dist(cluster_scaled[samp_idx, ]))
-cat("\nAvg Silhouette Score (2000-row sample):", round(mean(sil[, 3]), 4), "\n")
-
-# Cluster plot — PageValues vs BounceRates (no collinear pair used)
-p_clust <- ggplot(df, aes(x = PageValues, y = BounceRates,
-                          color = Cluster, shape = Revenue)) +
-  geom_point(alpha = 0.4, size = 1.5) +
-  scale_color_brewer(palette = "Set1") +
-  theme_minimal() +
-  labs(title = "Visitor segments: PageValues vs BounceRates",
-       x = "Page Values", y = "Bounce Rate")
-ggsave("outputs/plots/kmeans_visitor_segments.png", p_clust, width = 9, height = 6)
-
-write.csv(df, "data/final_with_clusters.csv", row.names = FALSE)
 cat("\nModelling complete. All outputs saved.\n")

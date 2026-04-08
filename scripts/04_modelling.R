@@ -116,4 +116,5 @@ ggsave("outputs/plots/feature_importance.png", p_imp, width = 9, height = 6)
 test$Predicted_Revenue    <- rf_preds
 test$Purchase_Probability <- rf_probs
 write.csv(test, "outputs/model_results/rf_predictions.csv", row.names = FALSE)
+write.csv(test, "docker/rf_predictions.csv", row.names = FALSE)
 cat("\nModelling complete. All outputs saved.\n")

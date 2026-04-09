@@ -14,7 +14,7 @@ The goal is to understand if regional digital development (like Internet Users p
 ## 📂 Repository Structure
 ```text
 ├── data/
-│   ├── raw/                # Original datasets (World Bank API pull & Ad CSV)
+│   ├── raw/                # Original datasets (World Bank API pull & Ad CSV) 
 │   └── processed/          # Merged and cleaned data ready for modeling
 ├── docker/                 # Containerization files (rf_predictions.csv)
 ├── outputs/

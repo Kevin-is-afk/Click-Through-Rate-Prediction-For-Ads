@@ -4,6 +4,13 @@
 This project is a comprehensive Machine Learning pipeline designed to predict whether a user will click on an advertisement. The analysis uniquely combines behavioral data (online shoppers' intention) with global infrastructure metrics retrieved via the **World Bank API**.
 The goal is to understand if regional digital development (like Internet Users per 100 people) acts as a significant predictor for ad engagement.
 
+## Dataset
+- Name: Online Shoppers Purchasing Intention
+- Source: UCI ML Repository (https://archive.ics.uci.edu/dataset/468)
+- Rows: 12,330 | Attributes: 18
+- Types: 10 numeric + 8 categorical
+- Target: Revenue (purchase intent: TRUE/FALSE)
+
 ## 📂 Repository Structure
 ```text
 ├── data/

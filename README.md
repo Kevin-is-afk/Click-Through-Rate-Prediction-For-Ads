@@ -50,13 +50,17 @@ install.packages(c("httr", "jsonlite", "dplyr", "lubridate", "ggplot2", "corrplo
 To reproduce the results, run the scripts in the following sequence:
 
 ```
-Ingestion: scripts/01_api_ingestion.R (Fetches World Bank data).
+Ingestion: scripts/01_api_ingestion.R
+  This stage establishes a live connection to the World Bank Indicators API. This demonstrates the ability to handle live JSON responses and API authentication.
 
-Preprocessing: scripts/02_preprocessing.R (Joins datasets and handles missing values).
+Preprocessing: scripts/02_preprocessing.R
+  Here, raw behavioral data is merged with the API metrics. This script handles the "heavy lifting" of data cleaning: resolving missing values, aligning timestamps with lubridate, and performing feature engineering to create a unified dataset ready for statistical analysis.
 
 EDA: scripts/03_eda.R (Generates insights and saves to outputs/plots/).
-
+  This script utilizes ggplot2 and corrplot to visualize relationships between user intent and ad clicks. Key visualizations (like correlation heatmaps and distribution plots) are automatically exported to the /outputs/plots directory.
+  
 Modelling: scripts/04_modelling.R (Trains the Random Forest and outputs predictions).
+  The final stage uses the Random Forest algorithm to classify user behavior. The script performs a supervised learning task, splitting the data for training and testing. It evaluates model performance using AUC-ROC curves
 ```
 ## Data Synchronization Flow
 Below is the automated pipeline from the initial code change to the final visualization:

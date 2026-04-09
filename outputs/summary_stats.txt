@@ -1,61 +1,47 @@
 SUMMARY STATISTICS 
 
- Administrative   Administrative_Duration Informational    
- Min.   : 0.000   Min.   :   0.00         Min.   : 0.0000  
- 1st Qu.: 0.000   1st Qu.:   0.00         1st Qu.: 0.0000  
- Median : 1.000   Median :   7.50         Median : 0.0000  
- Mean   : 2.315   Mean   :  80.82         Mean   : 0.5036  
- 3rd Qu.: 4.000   3rd Qu.:  93.26         3rd Qu.: 0.0000  
- Max.   :27.000   Max.   :3398.75         Max.   :24.0000  
- Informational_Duration ProductRelated   ProductRelated_Duration
- Min.   :   0.00        Min.   :  0.00   Min.   :    0.0        
- 1st Qu.:   0.00        1st Qu.:  7.00   1st Qu.:  184.1        
- Median :   0.00        Median : 18.00   Median :  598.9        
- Mean   :  34.47        Mean   : 31.73   Mean   : 1194.8        
- 3rd Qu.:   0.00        3rd Qu.: 38.00   3rd Qu.: 1464.2        
- Max.   :2549.38        Max.   :705.00   Max.   :63973.5        
-  BounceRates         ExitRates         PageValues        SpecialDay     
- Min.   :0.000000   Min.   :0.00000   Min.   :  0.000   Min.   :0.00000  
- 1st Qu.:0.000000   1st Qu.:0.01429   1st Qu.:  0.000   1st Qu.:0.00000  
- Median :0.003112   Median :0.02516   Median :  0.000   Median :0.00000  
- Mean   :0.022191   Mean   :0.04307   Mean   :  5.889   Mean   :0.06143  
- 3rd Qu.:0.016813   3rd Qu.:0.05000   3rd Qu.:  0.000   3rd Qu.:0.00000  
- Max.   :0.200000   Max.   :0.20000   Max.   :361.764   Max.   :1.00000  
-    Month           OperatingSystems    Browser           Region     
- Length:12330       Min.   :1.000    Min.   : 1.000   Min.   :1.000  
- Class :character   1st Qu.:2.000    1st Qu.: 2.000   1st Qu.:1.000  
- Mode  :character   Median :2.000    Median : 2.000   Median :3.000  
-                    Mean   :2.124    Mean   : 2.357   Mean   :3.147  
-                    3rd Qu.:3.000    3rd Qu.: 2.000   3rd Qu.:4.000  
-                    Max.   :8.000    Max.   :13.000   Max.   :9.000  
-  TrafficType               VisitorType     Weekend         Revenue     
- Min.   : 1.00   New_Visitor      : 1694   Mode :logical   FALSE:10422  
- 1st Qu.: 2.00   Other            :   85   FALSE:9462      TRUE : 1908  
- Median : 2.00   Returning_Visitor:10551   TRUE :2868                   
- Mean   : 4.07                                                          
- 3rd Qu.: 4.00                                                          
- Max.   :20.00                                                          
-   Country          InternetUsersPer100   TotalPages     TotalDuration  
- Length:12330       Min.   : 1.84       Min.   :  0.00   Min.   :    0  
- Class :character   1st Qu.: 1.84       1st Qu.:  8.00   1st Qu.:  222  
- Mode  :character   Median : 3.00       Median : 20.00   Median :  680  
-                    Mean   :11.71       Mean   : 34.55   Mean   : 1310  
-                    3rd Qu.:10.18       3rd Qu.: 42.00   3rd Qu.: 1627  
-                    Max.   :70.04       Max.   :746.00   Max.   :69922  
- EngagementRatio   BounceExitSpread     SessionScore        Season    
- Min.   : 0.0000   Min.   :-0.065606   Min.   :  0.000   Autumn:4283  
- 1st Qu.: 0.0000   1st Qu.: 0.008113   1st Qu.:  0.000   Spring:5271  
- Median : 0.0000   Median : 0.015750   Median :  0.000   Summer: 865  
- Mean   : 0.2861   Mean   : 0.020881   Mean   :  5.771   Winter:1911  
- 3rd Qu.: 0.0000   3rd Qu.: 0.027273   3rd Qu.:  0.000                
- Max.   :58.3721   Max.   : 0.200000   Max.   :359.235                
- DurationGroup     
- Length:12330      
- Class :character  
- Mode  :character  
-                   
-                   
-                   
+ Administrative   Administrative_Duration Informational     Informational_Duration
+ Min.   : 0.000   Min.   :   0.00         Min.   : 0.0000   Min.   :   0.00       
+ 1st Qu.: 0.000   1st Qu.:   0.00         1st Qu.: 0.0000   1st Qu.:   0.00       
+ Median : 1.000   Median :   7.50         Median : 0.0000   Median :   0.00       
+ Mean   : 2.315   Mean   :  80.82         Mean   : 0.5036   Mean   :  34.47       
+ 3rd Qu.: 4.000   3rd Qu.:  93.26         3rd Qu.: 0.0000   3rd Qu.:   0.00       
+ Max.   :27.000   Max.   :3398.75         Max.   :24.0000   Max.   :2549.38       
+ ProductRelated   ProductRelated_Duration  BounceRates         ExitRates      
+ Min.   :  0.00   Min.   :    0.0         Min.   :0.000000   Min.   :0.00000  
+ 1st Qu.:  7.00   1st Qu.:  184.1         1st Qu.:0.000000   1st Qu.:0.01429  
+ Median : 18.00   Median :  598.9         Median :0.003112   Median :0.02516  
+ Mean   : 31.73   Mean   : 1194.7         Mean   :0.022191   Mean   :0.04307  
+ 3rd Qu.: 38.00   3rd Qu.: 1464.2         3rd Qu.:0.016813   3rd Qu.:0.05000  
+ Max.   :705.00   Max.   :63973.5         Max.   :0.200000   Max.   :0.20000  
+   PageValues        SpecialDay         Month           OperatingSystems    Browser      
+ Min.   :  0.000   Min.   :0.00000   Length:12330       Min.   :1.000    Min.   : 1.000  
+ 1st Qu.:  0.000   1st Qu.:0.00000   Class :character   1st Qu.:2.000    1st Qu.: 2.000  
+ Median :  0.000   Median :0.00000   Mode  :character   Median :2.000    Median : 2.000  
+ Mean   :  5.889   Mean   :0.06143                      Mean   :2.124    Mean   : 2.357  
+ 3rd Qu.:  0.000   3rd Qu.:0.00000                      3rd Qu.:3.000    3rd Qu.: 2.000  
+ Max.   :361.764   Max.   :1.00000                      Max.   :8.000    Max.   :13.000  
+     Region       TrafficType               VisitorType     Weekend         Revenue     
+ Min.   :1.000   Min.   : 1.00   New_Visitor      : 1694   Mode :logical   FALSE:10422  
+ 1st Qu.:1.000   1st Qu.: 2.00   Other            :   85   FALSE:9462      TRUE : 1908  
+ Median :3.000   Median : 2.00   Returning_Visitor:10551   TRUE :2868                   
+ Mean   :3.147   Mean   : 4.07                                                          
+ 3rd Qu.:4.000   3rd Qu.: 4.00                                                          
+ Max.   :9.000   Max.   :20.00                                                          
+ InternetUsersPer100   TotalPages     TotalDuration   EngagementRatio   BounceExitSpread   
+ Min.   : 1.84       Min.   :  0.00   Min.   :    0   Min.   : 0.0000   Min.   :-0.065606  
+ 1st Qu.: 1.84       1st Qu.:  8.00   1st Qu.:  222   1st Qu.: 0.0000   1st Qu.: 0.008113  
+ Median : 3.00       Median : 20.00   Median :  680   Median : 0.0000   Median : 0.015750  
+ Mean   :11.71       Mean   : 34.55   Mean   : 1310   Mean   : 0.2861   Mean   : 0.020881  
+ 3rd Qu.:10.18       3rd Qu.: 42.00   3rd Qu.: 1627   3rd Qu.: 0.0000   3rd Qu.: 0.027273  
+ Max.   :70.04       Max.   :746.00   Max.   :69922   Max.   :58.3721   Max.   : 0.200000  
+  SessionScore        Season     DurationGroup     
+ Min.   :  0.000   Autumn:4283   Length:12330      
+ 1st Qu.:  0.000   Spring:5271   Class :character  
+ Median :  0.000   Summer: 865   Mode  :character  
+ Mean   :  5.771   Winter:1911                     
+ 3rd Qu.:  0.000                                   
+ Max.   :359.235                                   
 
 PURCHASE RATE
 

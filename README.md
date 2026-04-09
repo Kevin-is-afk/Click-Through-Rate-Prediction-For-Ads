@@ -51,3 +51,15 @@ EDA: scripts/03_eda.R (Generates insights and saves to outputs/plots/).
 
 Modelling: scripts/04_modelling.R (Trains the Random Forest and outputs predictions).
 ```
+## Data Synchronization Flow
+Below is the automated pipeline from the initial code change to the final visualization:
+
+```mermaid
+graph TD
+    A[GitHub Change] -->|git pull| B[Local Machine / Server]
+    B --> C[Docker Container Reads Updated CSV]
+    C --> D[Power BI Desktop / Service]
+    D -->|Refresh| E[Updated Dashboard Visuals]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#00ff00,stroke:#333,stroke-width:2px

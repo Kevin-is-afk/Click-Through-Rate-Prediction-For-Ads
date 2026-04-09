@@ -8,6 +8,29 @@ cat("Rows:", nrow(df), "| Cols:", ncol(df), "\n")
 cat("Missing values:\n")
 print(colSums(is.na(df)))
 
+# --- NEW: World Bank API Data Integration ---
+
+# 1. Load your API data
+# Assuming you saved your API pull as worldbank_internet_users.csv
+wb_raw <- read.csv("data/raw/worldbank_internet_users.csv")
+
+# 2. Encode Alphabetically (1 to 236)
+wb_encoded <- wb_raw %>%
+  distinct(Country, .keep_all = TRUE) %>%  # Ensure no duplicates
+  arrange(Country) %>%                     # Sort A-Z
+  mutate(RegionID = row_number()) %>%      # Assign 1 to 236
+  select(RegionID, Country, InternetUsersPer100)
+
+df <- df %>%
+  mutate(Region = as.integer(as.character(Region))) %>% # Convert factor back to int for join
+  left_join(wb_encoded, by = c("Region" = "RegionID"))
+
+# 4. Handle any missing data from the join
+df$InternetUsersPer100[is.na(df$InternetUsersPer100)] <- median(df$InternetUsersPer100, na.rm = TRUE)
+
+cat("\n=== Integration Complete ===\n")
+cat("Added World Bank columns: Country, InternetUsersPer100\n")
+
 #Fixing data types
 df$Revenue      <- as.factor(df$Revenue)       
 df$Weekend      <- as.factor(df$Weekend)
@@ -53,5 +76,6 @@ df$DurationGroup <- cut(df$TotalDuration,
                         labels = c("Zero", "Short", "Medium", "Long", "Very Long"))
 
 #4. Save
+# 4. Save to processed folder
 write.csv(df, "data/processed_shoppers.csv", row.names = FALSE)
 cat("\nPreprocessing done. Final shape:", nrow(df), "rows x", ncol(df), "cols\n")

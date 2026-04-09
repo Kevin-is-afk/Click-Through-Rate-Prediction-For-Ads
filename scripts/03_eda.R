@@ -81,4 +81,4 @@ cat("\nPURCHASE RATE\n")
 print(prop.table(table(df$Revenue)) * 100)
 sink()
 
-cat("EDA complete. 6 plots saved to outputs/plots/\n")
+cat("EDA complete. 4 plots saved to outputs/plots/\n")

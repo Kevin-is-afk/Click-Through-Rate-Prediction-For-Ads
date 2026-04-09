@@ -19,7 +19,7 @@ wb_encoded <- wb_raw %>%
   distinct(Country, .keep_all = TRUE) %>%  # Ensure no duplicates
   arrange(Country) %>%                     # Sort A-Z
   mutate(RegionID = row_number()) %>%      # Assign 1 to 236
-  select(RegionID, Country, InternetUsersPer100)
+  select(RegionID, InternetUsersPer100)
 
 df <- df %>%
   mutate(Region = as.integer(as.character(Region))) %>% # Convert factor back to int for join

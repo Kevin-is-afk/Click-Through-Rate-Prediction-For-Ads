@@ -1,0 +1,42 @@
+SUMMARY STATISTICS 
+
+ Administrative   Administrative_Duration Informational     Informational_Duration ProductRelated  
+ Min.   : 0.000   Min.   :   0.00         Min.   : 0.0000   Min.   :   0.00        Min.   :  0.00  
+ 1st Qu.: 0.000   1st Qu.:   0.00         1st Qu.: 0.0000   1st Qu.:   0.00        1st Qu.:  7.00  
+ Median : 1.000   Median :   7.50         Median : 0.0000   Median :   0.00        Median : 18.00  
+ Mean   : 2.315   Mean   :  80.82         Mean   : 0.5036   Mean   :  34.47        Mean   : 31.73  
+ 3rd Qu.: 4.000   3rd Qu.:  93.26         3rd Qu.: 0.0000   3rd Qu.:   0.00        3rd Qu.: 38.00  
+ Max.   :27.000   Max.   :3398.75         Max.   :24.0000   Max.   :2549.38        Max.   :705.00  
+ ProductRelated_Duration  BounceRates         ExitRates         PageValues        SpecialDay     
+ Min.   :    0.0         Min.   :0.000000   Min.   :0.00000   Min.   :  0.000   Min.   :0.00000  
+ 1st Qu.:  184.1         1st Qu.:0.000000   1st Qu.:0.01429   1st Qu.:  0.000   1st Qu.:0.00000  
+ Median :  598.9         Median :0.003112   Median :0.02516   Median :  0.000   Median :0.00000  
+ Mean   : 1194.8         Mean   :0.022191   Mean   :0.04307   Mean   :  5.889   Mean   :0.06143  
+ 3rd Qu.: 1464.2         3rd Qu.:0.016813   3rd Qu.:0.05000   3rd Qu.:  0.000   3rd Qu.:0.00000  
+ Max.   :63973.5         Max.   :0.200000   Max.   :0.20000   Max.   :361.764   Max.   :1.00000  
+    Month           OperatingSystems    Browser           Region       TrafficType   
+ Length:12330       Min.   :1.000    Min.   : 1.000   Min.   :1.000   Min.   : 1.00  
+ Class :character   1st Qu.:2.000    1st Qu.: 2.000   1st Qu.:1.000   1st Qu.: 2.00  
+ Mode  :character   Median :2.000    Median : 2.000   Median :3.000   Median : 2.00  
+                    Mean   :2.124    Mean   : 2.357   Mean   :3.147   Mean   : 4.07  
+                    3rd Qu.:3.000    3rd Qu.: 2.000   3rd Qu.:4.000   3rd Qu.: 4.00  
+                    Max.   :8.000    Max.   :13.000   Max.   :9.000   Max.   :20.00  
+            VisitorType     Weekend         Revenue        TotalPages     TotalDuration   EngagementRatio  
+ New_Visitor      : 1694   Mode :logical   FALSE:10422   Min.   :  0.00   Min.   :    0   Min.   : 0.0000  
+ Other            :   85   FALSE:9462      TRUE : 1908   1st Qu.:  8.00   1st Qu.:  222   1st Qu.: 0.0000  
+ Returning_Visitor:10551   TRUE :2868                    Median : 20.00   Median :  680   Median : 0.0000  
+                                                         Mean   : 34.55   Mean   : 1310   Mean   : 0.2861  
+                                                         3rd Qu.: 42.00   3rd Qu.: 1627   3rd Qu.: 0.0000  
+                                                         Max.   :746.00   Max.   :69922   Max.   :58.3721  
+ BounceExitSpread     SessionScore        Season     DurationGroup     
+ Min.   :-0.065606   Min.   :  0.000   Autumn:4283   Length:12330      
+ 1st Qu.: 0.008113   1st Qu.:  0.000   Spring:5271   Class :character  
+ Median : 0.015750   Median :  0.000   Summer: 865   Mode  :character  
+ Mean   : 0.020881   Mean   :  5.771   Winter:1911                     
+ 3rd Qu.: 0.027273   3rd Qu.:  0.000                                   
+ Max.   : 0.200000   Max.   :359.235                                   
+
+PURCHASE RATE
+
+   FALSE     TRUE 
+84.52555 15.47445 

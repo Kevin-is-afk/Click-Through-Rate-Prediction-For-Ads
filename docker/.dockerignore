@@ -1,6 +1,3 @@
+*.pbix
 powerbi/
 .git
-.gitignore
-docker-compose.yml
-*.pbix
-__pycache__/

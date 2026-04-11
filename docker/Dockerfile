@@ -8,7 +8,9 @@ COPY docker/rf_predictions.csv .
 COPY data/ data/
 COPY outputs/ outputs/
 COPY scripts/ scripts/
-copy Dataset/ Dataset/
+COPY Dataset/ Dataset/
+COPY .Renviron .
+COPY README.md .
 
 RUN pip install flask pandas
 
